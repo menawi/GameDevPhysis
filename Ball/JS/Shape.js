@@ -2,7 +2,8 @@
 
 // There are vars "width" and "height" that NOT referenced in the shape class BUT are referenced in its child rectangle class
 
-
+// canvas
+// context
 
 class Shape {
   constructor(x, y, color) {
@@ -40,8 +41,8 @@ class Rectangle extends Shape {
     super(x, y, color);
     this.width = width;
     this.height = height;
-    this.dx = 5;
-    this.dy = 5;
+    this.dx = 1;
+    this.dy = 1;
 
   }
 
@@ -56,31 +57,37 @@ class Rectangle extends Shape {
   }
 }
 
-const redRectangle = new Rectangle(50, 50, 100, 200, "red");
+// red rectangle 
+const redRectangle = new Rectangle(10, 10, 50, 20, "red");
+
+// yellow rectangle
+const yellowRectangle = new Rectangle(100, 100, 25, 30, "yellow");
 
 function animate() {
+  // must clear canvas before every reDraw (experiment changing the value !)
   context.clearRect(0, 0, canvas.width, canvas.height);
-  rect.move(rect.dx, rect.dy);
-  rect.draw(context);
-  requestAnimationFrame(animate);
+
+  // red rectangle
+  redRectangle.move(redRectangle.dx, redRectangle.dy);
+  redRectangle.draw(context);
+
+  // yellow rectangle
+  yellowRectangle.move(yellowRectangle.dx, yellowRectangle.dy)
+  yellowRectangle.draw(context)
+
+  // requestanimationframe
+  requestAnimationFrame(animate)
 }
 
-animate();
+
+animate()
 
 
-// function animate() {
+// 🚨 What would running this below do?
 
-//   // redRectangle.draw(context)
-//   // redRectangle.move()
+// setInterval(() => {
+//   animate()
+// }, 500);
 
-// }
+// It would run the function "animate()" once every 60ms which means the animation will iterate a new run as if you created multilpe rectangle animations
 
-
-// const redRect = document.getElementById('redRect')
-// const yellowRect = document.getElementById('yellowRect')
-// const greenRect = document.getElementById('greenRect')
-
-
-
-
-// Let's draw some shapes !
