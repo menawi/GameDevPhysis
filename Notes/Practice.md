@@ -2,6 +2,15 @@
 
 > Focus on the physics of the javascript canvas library
 
+
+# Learning Method
+- Run through the code and explain it verbally (focus on making understanding programs accessible)
+- Experiment with changing values and making hypotheses
+- Make a slight variation (useful but not too useful)
+
+
+---------------
+
 # Goals
 1. Learn to draw objects
 2. Learn to move objects

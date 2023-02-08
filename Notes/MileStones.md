@@ -18,3 +18,10 @@ By calling super.move(dx, dy) in the move method of the Rectangle class, the mov
 }
 ```
 In this example, the display property is set to block to make the canvas element a block-level element, which takes up the full width of its parent container. The margin property is set to 0 auto, which applies zero margin to the top and bottom of the canvas and automatically calculates the left and right margins so that the canvas is centered horizontally within its parent container.
+
+
+> Understand setInterval running a function without "deleting" the previous one
+
+It can essentially accumulate the output of the function like a 'waterfall' for example
+
+This is where setTimeOut comes into play 
